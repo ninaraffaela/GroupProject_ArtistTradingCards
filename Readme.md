@@ -6,7 +6,7 @@
 
 __________
 ## OverView First Shot by Bolt
-![OverView First Shot by Bolt](src/assets/img/Overview_ArtistTradingCards.png)
+![Overview](src/assets/img/Overview_ArtistTradingCards.png)
 __________
 ## Assignment:
 
