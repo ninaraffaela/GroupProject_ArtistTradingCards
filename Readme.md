@@ -5,9 +5,12 @@
 - 🍀Nina
 
 __________
-## OverView First Shot by Bolt
-![Overview](src/assets/img/Overview_ArtistTradingCards.png)
-__________
+## OverView 
+![Overview All Devices](src/assets/img/AllDevices.webp)
+____
+## Deployed Page
+
+Check out the deployed project here: [Artist Trading Cards](https://monaminaninaartisttradingcards.vercel.app/)
 ## Assignment:
 
 "Wir bauen eine kleine React-App, in der du Sammelkarten erstellen und anzeigen kannst – inspiriert von Panini-Karten oder Trading Cards.
@@ -24,14 +27,6 @@ _________
 - delete cards
 - chose Theme: Dark, Light, 80s Pulse Neon
 _________
-
-## XMind Kickoff
-![Xmind Kickoff](src/assets/img/XMind_KickOff.png)
-
-## XMind after bolt´s first draft
-![Xmind after bolts first draft](src/assets/img/XMind_afterFirstShot.png)
-
-____
 ## Tech Stack
 ![Tech Stack](src/assets/img/TechStack.png)
 
@@ -40,5 +35,16 @@ ____
 - bolt.new
 - copilot
 ______
+
+### XMind Kickoff
+![Xmind Kickoff](src/assets/img/XMind_KickOff.png)
+
+### XMind after bolt´s first draft
+![Xmind after bolts first draft](src/assets/img/XMind_afterFirstShot.png)
+
+### Xmind Final
+![Xmind Final](src/assets/img/XMind_Final.png)
+
+
 
 # GroupProject_ArtistTradingCards
