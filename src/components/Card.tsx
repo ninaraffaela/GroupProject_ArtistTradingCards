@@ -51,9 +51,7 @@ const Card: React.FC<CardProps> = ({ card, onEdit, onDelete }) => {
           <Trash size={16} />
         </button>
       </div>
-      <div className="card-footer">
-        <span className="card-collector-number">#{card.id.substring(0, 5)}</span>
-      </div>
+      
     </div>
   );
 };
