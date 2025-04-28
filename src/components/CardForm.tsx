@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { ArtistCard } from '../types/ArtistCard';
+import React, { useState, useEffect } from "react";
+import { ArtistCard } from "../types/ArtistCard";
 
 interface CardFormProps {
-  onSubmit: (card: Omit<ArtistCard, 'id'>) => void;
+  onSubmit: (card: Omit<ArtistCard, "id">) => void;
   editingCard: ArtistCard | null;
   isEditing: boolean;
   onCancelEdit: () => void;
 }
 
-const CardForm: React.FC<CardFormProps> = ({ 
-  onSubmit, 
-  editingCard, 
+const CardForm: React.FC<CardFormProps> = ({
+  onSubmit,
+  editingCard,
   isEditing,
-  onCancelEdit 
+  onCancelEdit,
 }) => {
-  const [formData, setFormData] = useState<Omit<ArtistCard, 'id'>>({
-    name: '',
+  const [formData, setFormData] = useState<Omit<ArtistCard, "id">>({
+    name: "",
     age: 0,
-    genre: '',
+    genre: "",
     albumsSold: 0,
-    origin: '',
-    recordlabel: '',
-    imageUrl: ''
+    origin: "",
+    recordlabel: "",
+    imageUrl: "",
   });
 
   useEffect(() => {
@@ -30,13 +30,13 @@ const CardForm: React.FC<CardFormProps> = ({
       setFormData(rest);
     } else {
       setFormData({
-        name: '',
+        name: "",
         age: 0,
-        genre: '',
+        genre: "",
         albumsSold: 0,
-        origin: '',
-        recordlabel: '',
-        imageUrl: ''
+        origin: "",
+        recordlabel: "",
+        imageUrl: "",
       });
     }
   }, [isEditing, editingCard]);
@@ -45,7 +45,7 @@ const CardForm: React.FC<CardFormProps> = ({
     const { name, value, type } = e.target;
     setFormData({
       ...formData,
-      [name]: type === 'number' ? Number(value) : value
+      [name]: type === "number" ? (value === "" ? 0 : Number(value)) : value,
     });
   };
 
@@ -54,20 +54,22 @@ const CardForm: React.FC<CardFormProps> = ({
     onSubmit(formData);
     if (!isEditing) {
       setFormData({
-        name: '',
+        name: "",
         age: 0,
-        genre: '',
+        genre: "",
         albumsSold: 0,
-        origin: '',
-        recordlabel: '',
-        imageUrl: ''
+        origin: "",
+        recordlabel: "",
+        imageUrl: "",
       });
     }
   };
 
   return (
     <div className="card-form-container">
-      <h2 className="form-title">{isEditing ? 'Edit Artist Card' : 'Create New Artist Card'}</h2>
+      <h2 className="form-title">
+        {isEditing ? "Edit Artist Card" : "Create New Artist Card"}
+      </h2>
       <form onSubmit={handleSubmit} className="card-form">
         <div className="form-group">
           <label htmlFor="name">Artist Name</label>
@@ -89,10 +91,11 @@ const CardForm: React.FC<CardFormProps> = ({
             type="number"
             id="age"
             name="age"
-            value={formData.age}
+            value={formData.age === 0 ? "" : formData.age}
             onChange={handleChange}
             required
             min={1}
+            placeholder="e.g. 29"
             aria-label="Artist age"
           />
         </div>
@@ -117,10 +120,11 @@ const CardForm: React.FC<CardFormProps> = ({
             type="number"
             id="albumsSold"
             name="albumsSold"
-            value={formData.albumsSold}
+            value={formData.albumsSold === 0 ? "" : formData.albumsSold}
             onChange={handleChange}
             required
             min={0}
+            placeholder="e.g. 300"
             aria-label="Albums sold in millions"
           />
         </div>
@@ -169,11 +173,11 @@ const CardForm: React.FC<CardFormProps> = ({
 
         <div className="form-actions">
           <button type="submit" className="submit-button">
-            {isEditing ? 'Save Changes' : 'Add Card'}
+            {isEditing ? "Save Changes" : "Add Card"}
           </button>
           {isEditing && (
-            <button 
-              type="button" 
+            <button
+              type="button"
               className="cancel-button"
               onClick={onCancelEdit}
             >
