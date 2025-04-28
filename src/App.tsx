@@ -120,7 +120,8 @@ function App() {
       </main>
 
       <footer className="app-footer">
-        <p>Artist Trading Cards Collection © {new Date().getFullYear()}</p>
+        <p>Created in the SuperCode Bootcamp 🚀 with the help of bolt.new 🚀
+        improved by 🦖 <a href="https://github.com/codeshipofmina" target="_blank">Mina</a>, 🦖 <a href="https://github.com/ninaraffaela" target="_blank">Nina</a> & 🦖 <a href="https://github.com/MonaEis" target="_blank">Mona</a> © {new Date().getFullYear()}</p>
       </footer>
     </div>
   );

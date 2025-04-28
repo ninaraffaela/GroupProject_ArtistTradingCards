@@ -424,6 +424,12 @@
   opacity: 0.7;
 }
 
+
+footer a{
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
 /* Animation for Theme transitions */
 @keyframes neonGlow {
   0% { box-shadow: 0 0 5px var(--color-primary-neon); }
