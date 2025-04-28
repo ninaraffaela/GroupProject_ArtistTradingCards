@@ -129,6 +129,12 @@
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .form-group input:focus {
   border-color: var(--color-primary);
   box-shadow: 0 0 0 2px rgba(var(--color-primary-rgb), 0.2);
@@ -141,7 +147,10 @@
   margin-top: var(--space-2);
 }
 
-.submit-button, .cancel-button, .save-button, .load-button {
+.submit-button,
+.cancel-button,
+.save-button,
+.load-button {
   padding: var(--space-3) var(--space-4);
   border-radius: var(--radius-md);
   font-weight: 500;
@@ -184,7 +193,8 @@
   margin-top: var(--space-4);
 }
 
-.save-button, .load-button {
+.save-button,
+.load-button {
   flex: 1;
   font-size: 0.875rem;
   border: 1px solid var(--color-card-border);
@@ -192,7 +202,8 @@
   color: var(--color-text);
 }
 
-.save-button:hover, .load-button:hover {
+.save-button:hover,
+.load-button:hover {
   border-color: var(--color-primary);
   transform: translateY(-2px);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
@@ -274,14 +285,12 @@
   inset: 0;
   border-radius: var(--radius-lg);
   padding: 2px;
-  background: linear-gradient(
-    to bottom right,
-    var(--color-primary),
-    var(--color-secondary)
-  );
-  -webkit-mask: 
-     linear-gradient(#fff 0 0) content-box, 
-     linear-gradient(#fff 0 0);
+  background: linear-gradient(to bottom right,
+      var(--color-primary),
+      var(--color-secondary));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
@@ -300,17 +309,15 @@
 .artist-card.neon {
   background-color: var(--color-card-bg-neon);
   color: var(--color-text-neon);
-  box-shadow: 0 0 15px var(--color-primary-neon), 
-              0 0 30px rgba(255, 0, 255, 0.3);
+  box-shadow: 0 0 15px var(--color-primary-neon),
+    0 0 30px rgba(255, 0, 255, 0.3);
 }
 
 .artist-card.neon::before {
-  background: linear-gradient(
-    45deg,
-    var(--color-primary-neon),
-    var(--color-secondary-neon),
-    var(--color-primary-neon)
-  );
+  background: linear-gradient(45deg,
+      var(--color-primary-neon),
+      var(--color-secondary-neon),
+      var(--color-primary-neon));
   opacity: 0.8;
 }
 
@@ -342,11 +349,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.25) 0%,
-    rgba(255, 255, 255, 0) 60%
-  );
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0) 60%);
   pointer-events: none;
 }
 
@@ -389,7 +394,8 @@
   padding: 0 var(--space-4) var(--space-3);
 }
 
-.edit-button, .delete-button {
+.edit-button,
+.delete-button {
   background-color: transparent;
   border: 1px solid var(--color-card-border);
   color: var(--color-text);
@@ -426,9 +432,17 @@
 
 /* Animation for Theme transitions */
 @keyframes neonGlow {
-  0% { box-shadow: 0 0 5px var(--color-primary-neon); }
-  50% { box-shadow: 0 0 20px var(--color-primary-neon), 0 0 30px var(--color-secondary-neon); }
-  100% { box-shadow: 0 0 5px var(--color-primary-neon); }
+  0% {
+    box-shadow: 0 0 5px var(--color-primary-neon);
+  }
+
+  50% {
+    box-shadow: 0 0 20px var(--color-primary-neon), 0 0 30px var(--color-secondary-neon);
+  }
+
+  100% {
+    box-shadow: 0 0 5px var(--color-primary-neon);
+  }
 }
 
 [data-theme="neon"] .artist-card {
@@ -442,13 +456,13 @@
     gap: var(--space-3);
     text-align: center;
   }
-  
+
   .form-section {
     position: relative;
     max-height: none;
     top: 0;
   }
-  
+
   .storage-actions {
     flex-direction: column;
   }
