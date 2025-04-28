@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   /* Light theme colors */
   --color-bg-light: #f8f9fa;
