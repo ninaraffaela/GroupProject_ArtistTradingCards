@@ -22,11 +22,23 @@ _________
 - add new card
 - edit cards
 - delete cards
+- chose Theme: Dark, Light, 80s Pulse Neon
 _________
 
 ## XMind Kickoff
 ![Xmind Kickoff](src/assets/img/XMind_KickOff.png)
 
-## XMind after bolts first draft
+## XMind after bolt´s first draft
 ![Xmind after bolts first draft](src/assets/img/XMind_afterFirstShot.png)
+
+____
+## Tech Stack
+![Tech Stack](src/assets/img/TechStack.png)
+
+## AI Tools
+- Chat GPT for the prompt for bolt
+- bolt.new
+- copilot
+______
+
 # GroupProject_ArtistTradingCards
