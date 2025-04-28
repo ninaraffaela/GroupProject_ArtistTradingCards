@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light theme colors */
+  --color-bg-light: #f8f9fa;
+  --color-text-light: #212529;
+  --color-primary-light: #4263eb;
+  --color-secondary-light: #20c997;
+  --color-accent-light: #fa5252;
+  --color-card-bg-light: #ffffff;
+  --color-card-border-light: #dee2e6;
+  
+  /* Dark theme colors */
+  --color-bg-dark: #121212;
+  --color-text-dark: #e9ecef;
+  --color-primary-dark: #748ffc;
+  --color-secondary-dark: #38d9a9;
+  --color-accent-dark: #ff6b6b;
+  --color-card-bg-dark: #1e1e1e;
+  --color-card-border-dark: #343a40;
+  
+  /* Neon theme colors */
+  --color-bg-neon: #0c0c19;
+  --color-text-neon: #f8f9fa;
+  --color-primary-neon: #ff00ff;
+  --color-secondary-neon: #00ffff;
+  --color-accent-neon: #ffff00;
+  --color-card-bg-neon: #170d2b;
+  --color-card-border-neon: #ff00ff;
+
+  /* Form colors */
+  --color-form-bg: rgba(255, 255, 255, 0.1);
+  --color-form-input: rgba(255, 255, 255, 0.08);
+  --color-form-border: rgba(255, 255, 255, 0.2);
+  
+  /* Common colors */
+  --color-success: #40c057;
+  --color-warning: #fab005;
+  --color-error: #fa5252;
+  
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  
+  /* Font */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: var(--font-sans);
+  --font-body: var(--font-sans);
+  
+  /* Line heights */
+  --line-height-heading: 1.2;
+  --line-height-body: 1.5;
+  
+  /* Default and fallback colors */
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
+}
+
+/* Apply theme colors based on data-theme attribute */
+[data-theme="light"] {
+  --color-bg: var(--color-bg-light);
+  --color-text: var(--color-text-light);
+  --color-primary: var(--color-primary-light);
+  --color-secondary: var(--color-secondary-light);
+  --color-accent: var(--color-accent-light);
+  --color-card-bg: var(--color-card-bg-light);
+  --color-card-border: var(--color-card-border-light);
+}
+
+[data-theme="dark"] {
+  --color-bg: var(--color-bg-dark);
+  --color-text: var(--color-text-dark);
+  --color-primary: var(--color-primary-dark);
+  --color-secondary: var(--color-secondary-dark);
+  --color-accent: var(--color-accent-dark);
+  --color-card-bg: var(--color-card-bg-dark);
+  --color-card-border: var(--color-card-border-dark);
+}
+
+[data-theme="neon"] {
+  --color-bg: var(--color-bg-neon);
+  --color-text: var(--color-text-neon);
+  --color-primary: var(--color-primary-neon);
+  --color-secondary: var(--color-secondary-neon);
+  --color-accent: var(--color-accent-neon);
+  --color-card-bg: var(--color-card-bg-neon);
+  --color-card-border: var(--color-card-border-neon);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  line-height: var(--line-height-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: var(--line-height-heading);
+  margin-top: 0;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
