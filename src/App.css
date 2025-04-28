@@ -40,6 +40,14 @@
   .app-content {
     grid-template-columns: 350px 1fr;
   }
+
+  .form-section {
+    position: relative;
+    max-height: none;
+    top: 0;
+  }
+
+  
 }
 
 .app-footer {
@@ -239,18 +247,25 @@ input::-webkit-inner-spin-button {
   .card-grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
+  .form-section {
+    position: relative;
+    max-height: none;
+    top: 0;
+  }
 }
 
 @media (min-width: 768px) {
   .card-grid {
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   }
+
 }
 
 @media (min-width: 1280px) {
   .card-grid {
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   }
+
 }
 
 .empty-state {
