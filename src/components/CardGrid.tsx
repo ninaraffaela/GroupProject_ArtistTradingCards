@@ -11,7 +11,7 @@ interface CardGridProps {
 const CardGrid: React.FC<CardGridProps> = ({ cards, onEdit, onDelete }) => {
   if (cards.length === 0) {
     return (
-      <div className="empty-state">
+      <div className="empty-state card-grid">
         <p>No artist cards yet. Create your first card above!</p>
       </div>
     );
