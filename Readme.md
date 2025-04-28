@@ -5,6 +5,8 @@ Mina
 Nina
 
 __________
+OverView First Shot by Bolt
+![OverView First Shot by Bolt](src/assets/img/Overview_ArtistTradingCards.png)
 
 Assignment:
 
@@ -21,4 +23,7 @@ Functionality:
 _________
 
 XMind Kickoff
-![Xmind Kickoff](XMind_KickOff.png)# GroupProject_ArtistTradingCards
+![Xmind Kickoff](src/assets/img/XMind_KickOff.png)
+
+
+# GroupProject_ArtistTradingCards
